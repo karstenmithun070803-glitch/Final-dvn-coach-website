@@ -12,7 +12,7 @@ export const BUS_MODELS: BusModel[] = [
       structure: 'GI Tubular / Anti-Corrosive Coated',
       compliance: 'AIS-052 Type I'
     },
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800'
+    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666458/T_-_2_xlsaww.jpg'
   },
   {
     id: 'mofussil-bus',
@@ -25,7 +25,7 @@ export const BUS_MODELS: BusModel[] = [
       structure: 'All-Steel Welded Frame',
       compliance: 'AIS-052 Type II'
     },
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800'
+    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/M_-1_n3famh.jpg'
   },
   {
     id: 'college-bus',
@@ -38,7 +38,7 @@ export const BUS_MODELS: BusModel[] = [
       structure: 'GI Tubular Frame',
       compliance: 'AIS-052 Type II'
     },
-    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800'
+    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/c_-_3_bdpby2.jpg'
   },
   {
     id: 'staff-bus',
@@ -51,7 +51,7 @@ export const BUS_MODELS: BusModel[] = [
       structure: 'Roll-over Protected Cage',
       compliance: 'AIS-153 Approved'
     },
-    imageUrl: 'https://images.unsplash.com/photo-1557223562-6c77ef16210f?auto=format&fit=crop&q=80&w=800'
+    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/s_-_4_afbq1j.jpg'
   }
 ];
 
