@@ -7,10 +7,10 @@ export const BUS_MODELS: BusModel[] = [
     type: 'Town',
     description: 'Built for the city’s non-stop pace,and reinforced chassis for maximum durability on high-traffic routes.',
     specifications: {
-      seating: '40+1 Semi-Deluxe',
-      chassis: 'AL / TATA / Eicher Compatible',
-      structure: 'GI Tubular / Anti-Corrosive Coated',
-      compliance: 'AIS-052 Type I'
+      seating: '40+1 capacity',
+      chassis: 'Leyland / TATA',
+      structure: 'Wheel Base - 210"/222"/12Metres ',
+      compliance: 'AIS-153 Type II'
     },
     imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666458/T_-_2_xlsaww.jpg'
   },
@@ -21,9 +21,9 @@ export const BUS_MODELS: BusModel[] = [
     description: 'Built for rugged rural terrains with heavy-duty suspension reinforcement and dust-sealed cabin.',
     specifications: {
       seating: '55+1 Standard',
-      chassis: 'Heavy Duty 12M Chassis',
-      structure: 'All-Steel Welded Frame',
-      compliance: 'AIS-052 Type II'
+      chassis: 'Leyland / TATA',
+      structure: 'Wheel Base - 210"/222"/12Metres',
+      compliance: 'AIS-153 Type II'
     },
     imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/M_-1_n3famh.jpg'
   },
@@ -34,9 +34,9 @@ export const BUS_MODELS: BusModel[] = [
     description: 'High-capacity transit solution for educational institutions with robust interior finishes.',
     specifications: {
       seating: '60+1 High Back',
-      chassis: '12M Standard Chassis',
-      structure: 'GI Tubular Frame',
-      compliance: 'AIS-052 Type II'
+      chassis: 'Leyland / TATA',
+      structure: 'Wheel Base - 210"/222"/12Metres',
+      compliance: 'AIS-152 Type II'
     },
     imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/c_-_3_bdpby2.jpg'
   },
@@ -47,9 +47,9 @@ export const BUS_MODELS: BusModel[] = [
     description: 'Built for reliable daily commutes, and focuses on passenger safety and comfortable seating for long transit hours. Designed for easy movement and durability, providing a dependable transport solution for corporate teams.',
     specifications: {
       seating: '50 Seats',
-      chassis: 'Medium Duty Chassis',
-      structure: 'Roll-over Protected Cage',
-      compliance: 'AIS-153 Approved'
+      chassis: 'Leyland / TATA',
+      structure: 'Wheel Base - 210"/222"/12Metres',
+      compliance: 'AIS-153 Type II'
     },
     imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/s_-_4_afbq1j.jpg'
   }
@@ -80,7 +80,7 @@ export const INFRASTRUCTURE: InfrastructureItem[] = [
 
 export const TESTIMONIALS: Testimonial[] = [
   {
-    name: 'SRM COLLEGE',
+    name: 'K.M.S PALANISWAMY, BHAVANI',
     role: 'INSTITUTIONAL PARTNER',
     content: 'The precision in their body building for our institutional fleet has been exceptional. Safety and durability are clearly their top priorities in every coach they deliver.',
     rating: 5,
@@ -92,8 +92,8 @@ export const TESTIMONIALS: Testimonial[] = [
     ]
   },
   {
-    name: 'AshokKumar S',
-    role: 'FLEET OPERATOR',
+    name: 'PREMA.A, SALEM',
+    role: 'FLEET OWNER',
     content: 'For a very long time, they have been doing a good job. Consistent quality and reliable engineering. Their attention to detail in structural integrity is unmatched.',
     rating: 5,
     images: [
@@ -104,7 +104,7 @@ export const TESTIMONIALS: Testimonial[] = [
     ]
   },
   {
-    name: 'Kheshore J R',
+    name: 'SATHIYAN, TANJORE',
     role: 'TRANSPORT PROFESSIONAL',
     content: 'The best bus body builder dynasty in Karur. Their reputation for excellence is well-deserved and reflected in every vehicle that leaves their facility.',
     rating: 5,
@@ -116,7 +116,7 @@ export const TESTIMONIALS: Testimonial[] = [
     ]
   },
   {
-    name: 'Sri Periya Sakthi',
+    name: 'RAVI, VELLAKOVIL',
     role: 'FLEET OWNER',
     content: 'The companies that build new bus bodies are doing a great job, and DVN stands out among them with their innovative designs and robust construction.',
     rating: 5,

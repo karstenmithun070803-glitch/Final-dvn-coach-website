@@ -33,6 +33,37 @@
   }
 }
 
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(
+      90deg, 
+      #FFB800 0%, 
+      #FFE194 20%, 
+      #FFFFFF 35%, 
+      #FFE194 50%, 
+      #FFB800 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  @keyframes shimmer-gold {
+    0% { background-position: 150% center; }
+    35% { background-position: -50% center; }
+    100% { background-position: -50% center; }
+  }
+
+  .animate-shimmer-gold {
+    animation: shimmer-gold 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .gold-underline {
+    background: linear-gradient(90deg, transparent 0%, #FFB800 50%, transparent 100%);
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

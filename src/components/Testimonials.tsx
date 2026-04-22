@@ -236,6 +236,27 @@ export default function Testimonials() {
           </AnimatePresence>
         </div>
 
+        {/* Social Media CTA */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-20 md:mt-28 flex justify-center text-center"
+        >
+          <p className="text-xl md:text-3xl text-white/50 font-sans tracking-wide">
+            For the latest update, follow us on{' '}
+            <a 
+              href="https://www.instagram.com/dvn_coach?igsh=N2N2dHg0aDNlYnpk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-amber-burnt font-bold hover:text-white transition-colors"
+            >
+              Instagram
+            </a>
+          </p>
+        </motion.div>
+
         {/* Lightbox Overlay */}
         <AnimatePresence>
           {lightbox.isOpen && (

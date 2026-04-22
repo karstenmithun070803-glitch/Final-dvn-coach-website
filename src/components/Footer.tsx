@@ -50,15 +50,19 @@ export default function Footer({ onInquiryClick }: FooterProps) {
               <li className="flex gap-4 items-start">
                 <MapPin className="text-amber-burnt shrink-0 mt-1" size={18} />
                 <span className="text-sm text-white/50 leading-relaxed">
-                  X359+HH5, Ramanujam Nagar, <br />
-                  Karur, Tamil Nadu 639002
+                  S. F. No. 1994/2 Madurai Bye-pass Road,<br />
+                  Near Periyar Arch, KARUR - 639 002
                 </span>
               </li>
-              <li className="flex gap-4 items-center">
-                <Phone className="text-amber-burnt shrink-0" size={18} />
-                <a href={`tel:${CONTACT_PHONE}`} className="text-sm text-white/50 hover:text-amber-burnt transition-colors">
-                  {CONTACT_PHONE}
-                </a>
+              <li className="flex gap-4 items-start">
+                <Phone className="text-amber-burnt shrink-0 mt-1" size={18} />
+                <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+                  {[CONTACT_PHONE, '9677978414', '8825447854', '9843512353'].map((phone) => (
+                    <a key={phone} href={`tel:${phone.replace(/\s/g, '')}`} className="text-sm text-white/50 hover:text-amber-burnt transition-colors whitespace-nowrap">
+                      {phone}
+                    </a>
+                  ))}
+                </div>
               </li>
               <li className="flex gap-4 items-center">
                 <Mail className="text-amber-burnt shrink-0" size={18} />
