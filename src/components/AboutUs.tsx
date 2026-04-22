@@ -4,7 +4,7 @@ import { Shield, Award, Users, Clock, History } from 'lucide-react';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-24 px-6 bg-white/[0.02]">
+    <section id="about" className="py-24 px-6 bg-white/[0.02] w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 min-[1025px]:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
           <motion.div

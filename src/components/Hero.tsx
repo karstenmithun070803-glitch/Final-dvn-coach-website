@@ -23,7 +23,7 @@ export default function Hero({ onInquiryClick }: HeroProps) {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden pt-24 md:pt-[100px] md:pb-12">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden pt-24 md:pt-[100px] md:pb-12">
       {/* Background Image Slider */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">

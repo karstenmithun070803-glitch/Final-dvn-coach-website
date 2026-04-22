@@ -5,7 +5,7 @@ import * as Icons from 'lucide-react';
 
 export default function Infrastructure() {
   return (
-    <section id="infrastructure" className="py-24 px-6">
+    <section id="infrastructure" className="py-24 px-6 w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <div className="text-amber-burnt font-bold text-xs uppercase tracking-[0.3em] mb-4">
@@ -118,17 +118,17 @@ export default function Infrastructure() {
                 },
                 { 
                   title: 'HYDRAULIC PRESSING', 
-                  img: 'https://images.unsplash.com/photo-1621345474387-f823f66810c9?auto=format&fit=crop&q=80&w=800',
+                  img: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776838342/WhatsApp_Image_2026-04-22_at_10.21.40_f0dkdx.jpg',
                   alt: 'Heavy duty press machine'
                 },
                 { 
                   title: 'ARC WELDING', 
-                  img: 'https://images.unsplash.com/photo-1536939459926-301728717817?auto=format&fit=crop&q=80&w=800',
+                  img: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776838342/WhatsApp_Image_2026-04-22_at_10.20.45_vstjcg.jpg',
                   alt: 'Precision TIG welding'
                 },
                 { 
                   title: 'LEAK TESTING', 
-                  img: 'https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&q=80&w=800',
+                  img: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776838342/WhatsApp_Image_2026-04-22_at_10.20.44_clvhek.jpg',
                   alt: 'Water leakage testing'
                 }
               ].map((item, i) => (

@@ -23,7 +23,7 @@ export default function App() {
   const closeInquiryModal = () => setIsInquiryModalOpen(false);
 
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-x-hidden">
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-amber-burnt z-[100] origin-left"

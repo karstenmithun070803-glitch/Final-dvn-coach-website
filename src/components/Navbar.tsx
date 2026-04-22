@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Phone, MessageSquare, ExternalLink } from 'lucide-react';
 import { cn } from '../lib/utils';
-import { WHATSAPP_LINK } from '../constants';
+import { WHATSAPP_LINK, INSTAGRAM_URL } from '../constants';
 import BrandLogo from './BrandLogo';
 
 interface NavbarProps {
@@ -12,8 +12,6 @@ interface NavbarProps {
 export default function Navbar({ onInquiryClick }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const INSTAGRAM_URL = "https://www.instagram.com/dvn_coach?igsh=N2N2dHg0aDNlYnpk";
 
   useEffect(() => {
     const handleScroll = () => {

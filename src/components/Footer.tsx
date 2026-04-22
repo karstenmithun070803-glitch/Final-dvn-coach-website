@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, Phone, MapPin, MessageSquare, Instagram } from 'lucide-react';
-import { CONTACT_PHONE } from '../constants';
+import { CONTACT_PHONE, INSTAGRAM_URL } from '../constants';
 import BrandLogo from './BrandLogo';
 
 interface FooterProps {
@@ -8,10 +8,8 @@ interface FooterProps {
 }
 
 export default function Footer({ onInquiryClick }: FooterProps) {
-  const INSTAGRAM_URL = "https://www.instagram.com/dvn_coach?igsh=N2N2dHg0aDNlYnpk";
-
   return (
-    <footer className="pt-24 pb-12 px-6 border-t border-white/5 bg-carbon-matte">
+    <footer className="pt-24 pb-12 px-6 border-t border-white/5 bg-carbon-matte w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto border-l border-white/5 pl-8 md:pl-0 md:border-l-0">
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_1fr] gap-12 pb-20">
           <div className="flex flex-col items-start text-left md:pr-16">

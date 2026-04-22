@@ -13,7 +13,7 @@
 
 @layer base {
   body {
-    @apply bg-carbon-matte text-white font-sans antialiased;
+    @apply bg-carbon-matte text-white font-sans antialiased overflow-x-hidden w-full;
     background: linear-gradient(135deg, var(--color-carbon-slate) 0%, var(--color-carbon-matte) 100%);
     min-height: 100vh;
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS, INSTAGRAM_URL } from '../constants';
 import { Quote, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 
 export default function Testimonials() {
@@ -71,7 +71,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="py-24 px-6 relative overflow-hidden">
+    <section id="testimonials" className="py-24 px-6 w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-16">
           <div className="text-amber-burnt font-bold text-xs uppercase tracking-[0.3em] mb-4">
@@ -247,7 +247,7 @@ export default function Testimonials() {
           <p className="text-xl md:text-3xl text-white/50 font-sans tracking-wide">
             For the latest update, follow us on{' '}
             <a 
-              href="https://www.instagram.com/dvn_coach?igsh=N2N2dHg0aDNlYnpk" 
+              href={INSTAGRAM_URL} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-amber-burnt font-bold hover:text-white transition-colors"
