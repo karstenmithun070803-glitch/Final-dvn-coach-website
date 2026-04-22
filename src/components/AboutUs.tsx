@@ -60,7 +60,7 @@ export default function AboutUs() {
             <div className="relative pl-12">
               <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
               <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
-                "With more 30 years of experience and expertise heading a 60 years old organisation was always an uphill ride. It takes true hard work and determination to achieve. Mentoring the company is always my priority."
+                "With more than 30 years of experience and expertise heading a 60 years old organisation was always an uphill ride. It takes true hard work and determination to achieve. Mentoring the company is always my priority."
               </p>
               <div className="flex flex-col">
                 <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">GA Ravindran</span>
