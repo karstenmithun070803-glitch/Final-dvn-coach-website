@@ -128,7 +128,7 @@ export default function Infrastructure() {
                 },
                 { 
                   title: 'LEAK TESTING', 
-                  img: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776838342/WhatsApp_Image_2026-04-22_at_10.20.44_clvhek.jpg',
+                  img: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776842583/IMG_0208_ccmzrw.jpg',
                   alt: 'Water leakage testing'
                 }
               ].map((item, i) => (
