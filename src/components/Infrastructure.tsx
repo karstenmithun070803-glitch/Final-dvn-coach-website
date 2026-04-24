@@ -67,7 +67,7 @@ export default function Infrastructure() {
               </div>
 
               <div className="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 glass-card p-6 lg:p-10 backdrop-blur-xl border-amber-burnt/20 shadow-[0_0_50px_rgba(255,184,0,0.15)]">
-                <div className="text-[clamp(1.5rem,4vw,3.5rem)] font-bold text-amber-burnt mb-1 leading-none">98%</div>
+                <div className="text-[clamp(1.5rem,4vw,3.5rem)] font-bold text-amber-burnt mb-1 leading-none">100%</div>
                 <div className="text-[clamp(0.6rem,1.2vw,0.85rem)] uppercase tracking-[0.2em] font-bold text-white/60">Structural Safety</div>
               </div>
             </div>
