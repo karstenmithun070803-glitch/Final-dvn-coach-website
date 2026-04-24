@@ -51,7 +51,7 @@ export const BUS_MODELS: BusModel[] = [
       structure: 'Wheel Base - 210"/222"/12Metres',
       compliance: 'AIS-153 Type II'
     },
-    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1776666457/s_-_4_afbq1j.jpg'
+    imageUrl: 'https://res.cloudinary.com/dxufff4iw/image/upload/v1777012522/WhatsApp_Image_2026-04-22_at_18.48.50_tg5dsh.jpg'
   }
 ];
 
