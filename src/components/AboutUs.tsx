@@ -49,7 +49,7 @@ export default function AboutUs() {
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
               <img 
-                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777015378/Screenshot_2026-04-24_at_12.51.46_PM_x6dngx.png" 
+                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102595/ChatGPT_Image_Apr_25_2026_01_04_15_PM_pgf6id.png" 
                 alt="GA Ravindran - Mentor and Chief Advisor"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-all duration-1000"
@@ -79,7 +79,7 @@ export default function AboutUs() {
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
               <img 
-                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777015379/Screenshot_2026-04-24_at_12.52.22_PM_soiqsm.png" 
+                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102588/WhatsApp_Image_2026-04-25_at_12.33.43_bm2cql.jpg" 
                 alt="VIJAYA BALAJI - CMD of DVN COACH"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-all duration-1000"
