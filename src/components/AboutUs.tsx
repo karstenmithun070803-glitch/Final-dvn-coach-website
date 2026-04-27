@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-24 px-6 bg-white/[0.02] w-full relative overflow-hidden">
+    <section className="py-24 px-6 bg-white/[0.02] w-full relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Tier 1: Horizontal Text Alignment */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start mb-24">
@@ -38,7 +38,18 @@ export default function AboutUs() {
         </div>
 
         {/* Tier 2: Side-by-Side Dynasty Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+        <div id="about" className="mb-16 scroll-mt-32">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center text-center"
+          >
+            <h3 className="text-5xl md:text-6xl font-bold tracking-tight uppercase text-amber-burnt">Key Persons</h3>
+          </motion.div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 lg:max-w-6xl mx-auto">
           {/* Column A: G.A. Ravindran (Grandfather) */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -47,7 +58,7 @@ export default function AboutUs() {
             viewport={{ once: true }}
             className="flex flex-col group max-w-md mx-auto w-full"
           >
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
               <img 
                 src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102595/ChatGPT_Image_Apr_25_2026_01_04_15_PM_pgf6id.png" 
                 alt="GA Ravindran - Mentor and Chief Advisor"
@@ -77,7 +88,7 @@ export default function AboutUs() {
             viewport={{ once: true }}
             className="flex flex-col group max-w-md mx-auto w-full"
           >
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
               <img 
                 src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102588/WhatsApp_Image_2026-04-25_at_12.33.43_bm2cql.jpg" 
                 alt="VIJAYA BALAJI - CMD of DVN COACH"
@@ -95,6 +106,36 @@ export default function AboutUs() {
               <div className="flex flex-col">
                 <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">VIJAYA BALAJI</span>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">CMD of DVN COACH</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Column C: Third Person (Centered Below) */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="md:col-span-2 flex flex-col group max-w-md mx-auto w-full"
+          >
+            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" 
+                alt="Director"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 pointer-events-none" />
+            </div>
+            
+            <div className="relative pl-12">
+              <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
+              <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
+                "We believe in constant innovation and unwavering commitment to quality. Our journey is defined by the trust our clients place in us and the excellence we deliver in every project."
+              </p>
+              <div className="flex flex-col">
+                <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">Name</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">Founder</span>
               </div>
             </div>
           </motion.div>

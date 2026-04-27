@@ -24,10 +24,10 @@ export default function Navbar({ onInquiryClick }: NavbarProps) {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Models', href: '#models' },
-    { name: 'About', href: '#about' },
     { name: 'Infrastructure', href: '#infrastructure' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Key Persons', href: '#about' },
     { name: 'Gallery', href: INSTAGRAM_URL, external: true },
+    { name: 'Testimonials', href: '#testimonials' },
   ];
 
   return (
