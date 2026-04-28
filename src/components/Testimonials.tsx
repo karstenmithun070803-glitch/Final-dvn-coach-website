@@ -113,7 +113,7 @@ export default function Testimonials() {
                     >
                       <img
                         src={current.images[0]}
-                        alt="Testimonial 1"
+                        alt={`${current.name} - DVN Coach customer bus`}
                         className="w-full h-full object-cover shadow-lg border border-white/5 transition-transform duration-700 group-hover/img:scale-110"
                         referrerPolicy="no-referrer"
                       />
@@ -130,7 +130,7 @@ export default function Testimonials() {
                       >
                         <img
                           src={current.images[1]}
-                          alt="Testimonial 2"
+                          alt={`${current.name} - DVN Coach bus body`}
                           className="w-full h-full object-cover shadow-lg border border-white/5 transition-transform duration-700 group-hover/img:scale-110"
                           referrerPolicy="no-referrer"
                         />
@@ -144,7 +144,7 @@ export default function Testimonials() {
                       >
                         <img
                           src={current.images[2]}
-                          alt="Testimonial 3"
+                          alt={`${current.name} - DVN Coach bus interior`}
                           className="w-full h-full object-cover shadow-lg border border-white/5 transition-transform duration-700 group-hover/img:scale-110"
                           referrerPolicy="no-referrer"
                         />
@@ -162,7 +162,7 @@ export default function Testimonials() {
                   >
                     <img
                       src={current.images[3]}
-                      alt="Testimonial 4"
+                      alt={`${current.name} - DVN Coach bus exterior`}
                       className="w-full h-full object-cover shadow-xl border border-white/5 transition-transform duration-700 group-hover/img:scale-110"
                       referrerPolicy="no-referrer"
                     />
