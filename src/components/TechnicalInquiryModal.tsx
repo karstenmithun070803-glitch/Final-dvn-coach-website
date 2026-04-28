@@ -14,6 +14,7 @@ interface TechnicalInquiryModalProps {
 export default function TechnicalInquiryModal({ isOpen, onClose, modelName }: TechnicalInquiryModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
   React.useEffect(() => {
@@ -34,15 +35,18 @@ export default function TechnicalInquiryModal({ isOpen, onClose, modelName }: Te
     setIsSubmitting(true);
 
     try {
-      await emailjs.sendForm(
+      setError(null);
+      const result = await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         formRef.current,
         EMAILJS_PUBLIC_KEY
       );
+      console.log('EmailJS success:', result);
       setIsSubmitted(true);
-    } catch (error) {
-      console.error('Form submission error:', error);
+    } catch (err: any) {
+      console.error('EmailJS error:', err);
+      setError(err?.text || err?.message || 'Failed to send. Please try WhatsApp instead.');
     } finally {
       setIsSubmitting(false);
     }
@@ -186,6 +190,10 @@ export default function TechnicalInquiryModal({ isOpen, onClose, modelName }: Te
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-burnt transition-colors resize-none"
                         />
                       </div>
+
+                      {error && (
+                        <p className="text-red-400 text-sm text-center">{error}</p>
+                      )}
 
                       <button
                         type="submit"
