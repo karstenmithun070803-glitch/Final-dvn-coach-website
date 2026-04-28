@@ -96,7 +96,7 @@ export default function TechnicalInquiryModal({ isOpen, onClose, modelName }: Te
                 </p>
 
                 <a
-                  href={WHATSAPP_LINK}
+                  href={modelName ? `${WHATSAPP_LINK}?text=I am interested in the ${encodeURIComponent(modelName)} model.` : WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-amber-burnt py-4 rounded-xl font-bold uppercase tracking-widest text-center flex items-center justify-center gap-3 amber-glow hover:scale-[1.02] transition-transform mb-8"
