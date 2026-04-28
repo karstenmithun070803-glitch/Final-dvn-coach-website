@@ -30,8 +30,8 @@ export default function AboutUs() {
             className="flex flex-col justify-end h-full"
           >
             <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl">
-              Based in Karur, Tamil Nadu, DVN Coach - Bus Body Builder is a leader in passenger vehicle body manufacturing. 
-              With a long-standing dynasty of excellence, we specialize in premium engineering, 
+              Based in Karur, Tamil Nadu, DVN Coach - Bus Body Builder is a leader in passenger vehicle body manufacturing.
+              With a long-standing dynasty of excellence, we specialize in premium engineering,
               creating structurally superior and high-performance bus bodies for the modern transport sector.
             </p>
           </motion.div>
@@ -74,7 +74,7 @@ export default function AboutUs() {
                 "We believe in constant innovation and unwavering commitment to quality. Our journey is defined by the trust our clients place in us and the excellence we deliver in every project."
               </p>
               <div className="flex flex-col">
-                <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">V.Moorthy B.E</span>
+                <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">Late V.Moorthy B.E</span>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">Founder</span>
               </div>
             </div>
