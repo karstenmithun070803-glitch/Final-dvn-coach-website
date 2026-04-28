@@ -50,24 +50,54 @@ export default function AboutUs() {
           </motion.div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 lg:max-w-6xl mx-auto">
-          {/* Column A: G.A. Ravindran (Grandfather) */}
+          {/* Row 1: V.Moorthy B.E (Founder) - Centered on top */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+            className="md:col-span-2 flex flex-col group max-w-md mx-auto w-full"
+          >
+            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
+              <img
+                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777294826/WhatsApp_Image_2026-04-27_at_18.27.51_neag1o.jpg"
+                alt="V.Moorthy B.E - Founder"
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover object-top transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 pointer-events-none" />
+            </div>
+
+            <div className="relative pl-12">
+              <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
+              <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
+                "We believe in constant innovation and unwavering commitment to quality. Our journey is defined by the trust our clients place in us and the excellence we deliver in every project."
+              </p>
+              <div className="flex flex-col">
+                <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">V.Moorthy B.E</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">Founder</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Row 2 Left: G.A. Ravindran */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ once: true }}
             className="flex flex-col group max-w-md mx-auto w-full"
           >
             <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
-              <img 
-                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102595/ChatGPT_Image_Apr_25_2026_01_04_15_PM_pgf6id.png" 
+              <img
+                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102595/ChatGPT_Image_Apr_25_2026_01_04_15_PM_pgf6id.png"
                 alt="GA Ravindran - Mentor and Chief Advisor"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 pointer-events-none" />
             </div>
-            
+
             <div className="relative pl-12">
               <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
               <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
@@ -80,24 +110,24 @@ export default function AboutUs() {
             </div>
           </motion.div>
 
-          {/* Column B: Vijaya Balaji (Owner) */}
+          {/* Row 2 Right: Vijaya Balaji */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 1, delay: 0.4 }}
             viewport={{ once: true }}
             className="flex flex-col group max-w-md mx-auto w-full"
           >
             <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
-              <img 
-                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102588/WhatsApp_Image_2026-04-25_at_12.33.43_bm2cql.jpg" 
+              <img
+                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777102588/WhatsApp_Image_2026-04-25_at_12.33.43_bm2cql.jpg"
                 alt="VIJAYA BALAJI - CMD of DVN COACH"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 pointer-events-none" />
             </div>
-            
+
             <div className="relative pl-12">
               <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
               <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
@@ -106,36 +136,6 @@ export default function AboutUs() {
               <div className="flex flex-col">
                 <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">VIJAYA BALAJI</span>
                 <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">CMD of DVN COACH</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Column C: Third Person (Centered Below) */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="md:col-span-2 flex flex-col group max-w-md mx-auto w-full"
-          >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 mb-8 relative bg-zinc-900/50 shadow-2xl shadow-black/50">
-              <img 
-                src="https://res.cloudinary.com/dxufff4iw/image/upload/v1777294826/WhatsApp_Image_2026-04-27_at_18.27.51_neag1o.jpg" 
-                alt="Director"
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover object-top transition-all duration-1000"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 pointer-events-none" />
-            </div>
-            
-            <div className="relative pl-12">
-              <Quote className="absolute top-0 left-0 text-amber-burnt/20 w-10 h-10" strokeWidth={1.5} />
-              <p className="text-white/80 italic text-lg md:text-xl leading-relaxed mb-6 font-medium">
-                "We believe in constant innovation and unwavering commitment to quality. Our journey is defined by the trust our clients place in us and the excellence we deliver in every project."
-              </p>
-              <div className="flex flex-col">
-                <span className="font-bold text-amber-burnt uppercase tracking-[0.3em] text-sm mb-1">V.Moorthy B.E</span>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-white/40 font-bold">Founder</span>
               </div>
             </div>
           </motion.div>
