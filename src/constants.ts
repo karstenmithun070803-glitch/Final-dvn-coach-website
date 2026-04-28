@@ -131,5 +131,8 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const CONTACT_PHONE = '09566596666';
 export const WHATSAPP_LINK = `https://wa.me/919566596666`;
-export const FORMSPREE_URL = 'https://formspree.io/f/xreywywa';
 export const INSTAGRAM_URL = 'https://www.instagram.com/dvncoach?igsh=MWh5aXV0M3dpeGxqNQ==';
+
+export const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+export const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+export const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;

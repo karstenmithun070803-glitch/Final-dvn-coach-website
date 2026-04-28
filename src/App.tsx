@@ -12,6 +12,7 @@ import { motion, useScroll, useSpring } from 'motion/react';
 
 export default function App() {
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
+  const [inquiryModelName, setInquiryModelName] = useState<string | undefined>(undefined);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -19,8 +20,14 @@ export default function App() {
     restDelta: 0.001
   });
 
-  const openInquiryModal = () => setIsInquiryModalOpen(true);
-  const closeInquiryModal = () => setIsInquiryModalOpen(false);
+  const openInquiryModal = (modelName?: string) => {
+    setInquiryModelName(modelName);
+    setIsInquiryModalOpen(true);
+  };
+  const closeInquiryModal = () => {
+    setIsInquiryModalOpen(false);
+    setInquiryModelName(undefined);
+  };
 
   return (
     <div className="relative w-full overflow-x-hidden">
@@ -34,7 +41,7 @@ export default function App() {
       
       <main>
         <Hero onInquiryClick={openInquiryModal} />
-        <BusModels />
+        <BusModels onInquiryClick={openInquiryModal} />
         <AboutUs />
         <Infrastructure />
         <Testimonials />
@@ -42,9 +49,10 @@ export default function App() {
 
       <Footer onInquiryClick={openInquiryModal} />
 
-      <TechnicalInquiryModal 
-        isOpen={isInquiryModalOpen} 
-        onClose={closeInquiryModal} 
+      <TechnicalInquiryModal
+        isOpen={isInquiryModalOpen}
+        onClose={closeInquiryModal}
+        modelName={inquiryModelName}
       />
 
       <BackToTop />

@@ -1,11 +1,15 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { BUS_MODELS, WHATSAPP_LINK } from '../constants';
+import { BUS_MODELS } from '../constants';
 import { BusModel } from '../types';
 import { X, ArrowUpRight, Info } from 'lucide-react';
 import { cn } from '../lib/utils';
 
-export default function BusModels() {
+interface BusModelsProps {
+  onInquiryClick: (modelName: string) => void;
+}
+
+export default function BusModels({ onInquiryClick }: BusModelsProps) {
   const [selectedModel, setSelectedModel] = useState<BusModel | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -56,9 +60,10 @@ export default function BusModels() {
 
       <AnimatePresence>
         {selectedModel && (
-          <ModelPopup 
-            model={selectedModel} 
-            onClose={() => setSelectedModel(null)} 
+          <ModelPopup
+            model={selectedModel}
+            onClose={() => setSelectedModel(null)}
+            onInquiryClick={onInquiryClick}
           />
         )}
       </AnimatePresence>
@@ -144,7 +149,7 @@ function ModelCard({ model, index, onClick, mousePos }: ModelCardProps) {
   );
 }
 
-function ModelPopup({ model, onClose }: { model: BusModel; onClose: () => void }) {
+function ModelPopup({ model, onClose, onInquiryClick }: { model: BusModel; onClose: () => void; onInquiryClick: (modelName: string) => void }) {
   React.useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -208,14 +213,12 @@ function ModelPopup({ model, onClose }: { model: BusModel; onClose: () => void }
               ))}
             </div>
 
-            <a
-              href={`${WHATSAPP_LINK}?text=I am interested in the ${model.name} model.`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => { onClose(); onInquiryClick(model.name); }}
               className="w-full bg-amber-burnt py-4 rounded-xl font-bold uppercase tracking-widest text-center block amber-glow hover:scale-[1.02] transition-transform"
             >
               Request Quote
-            </a>
+            </button>
           </div>
         </div>
       </motion.div>

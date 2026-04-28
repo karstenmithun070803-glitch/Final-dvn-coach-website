@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, MessageSquare, Send, CheckCircle2 } from 'lucide-react';
-import { WHATSAPP_LINK, FORMSPREE_URL } from '../constants';
+import emailjs from '@emailjs/browser';
+import { WHATSAPP_LINK, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../constants';
 import { cn } from '../lib/utils';
 
 interface TechnicalInquiryModalProps {
   isOpen: boolean;
   onClose: () => void;
+  modelName?: string;
 }
 
-export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInquiryModalProps) {
+export default function TechnicalInquiryModal({ isOpen, onClose, modelName }: TechnicalInquiryModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      setIsSubmitted(false);
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -26,27 +30,25 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current) return;
     setIsSubmitting(true);
-    
-    const formData = new FormData(e.currentTarget);
+
     try {
-      const response = await fetch(FORMSPREE_URL, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      
-      if (response.ok) {
-        setIsSubmitted(true);
-      }
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      );
+      setIsSubmitted(true);
     } catch (error) {
       console.error('Form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const defaultMessage = modelName ? `I am interested in the ${modelName} model.` : '';
 
   return (
     <AnimatePresence>
@@ -59,7 +61,7 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
             onClick={onClose}
             className="absolute inset-0 bg-carbon-matte/90 backdrop-blur-xl"
           />
-          
+
           <motion.div
             initial={{ scale: 0.95, y: 40, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
@@ -68,7 +70,7 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
             className="glass-card relative w-full max-w-4xl my-auto shadow-2xl z-10 rounded-[24px] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button - Responsive Strategy */}
+            {/* Close Button */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 md:absolute md:top-6 md:right-6 z-50 w-12 h-12 md:w-14 md:h-14 bg-black/50 hover:bg-black/70 backdrop-blur-md rounded-full flex items-center justify-center transition-all border border-white/10 shadow-2xl group"
@@ -85,7 +87,7 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
                 </div>
                 <h2 className="text-3xl font-bold mb-6 tracking-tight">Technical <br /> Consultation</h2>
                 <p className="text-white/60 mb-10 leading-relaxed">
-                  Connect directly with our engineering team for immediate technical specifications, 
+                  Connect directly with our engineering team for immediate technical specifications,
                   compliance queries, or custom fabrication requirements.
                 </p>
 
@@ -137,25 +139,25 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
                       Detailed Inquiry
                     </div>
                     <h3 className="text-2xl font-bold mb-8">Submit Specifications</h3>
-                    
-                    <form onSubmit={handleSubmit} className="space-y-5">
+
+                    <form ref={formRef} key={modelName ?? 'general'} onSubmit={handleSubmit} className="space-y-5">
                       <div>
                         <label className="block text-[10px] uppercase tracking-widest text-white/30 mb-2 font-bold">Full Name</label>
                         <input
                           required
-                          name="name"
+                          name="from_name"
                           type="text"
                           placeholder="Enter your name"
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-burnt transition-colors"
                         />
                       </div>
-                      
+
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="block text-[10px] uppercase tracking-widest text-white/30 mb-2 font-bold">Email</label>
                           <input
                             required
-                            name="email"
+                            name="from_email"
                             type="email"
                             placeholder="mail@example.com"
                             className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-burnt transition-colors"
@@ -179,6 +181,7 @@ export default function TechnicalInquiryModal({ isOpen, onClose }: TechnicalInqu
                           required
                           name="message"
                           rows={4}
+                          defaultValue={defaultMessage}
                           placeholder="Describe your fleet requirements..."
                           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-burnt transition-colors resize-none"
                         />
