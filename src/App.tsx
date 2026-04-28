@@ -21,7 +21,7 @@ export default function App() {
   });
 
   const openInquiryModal = (modelName?: string) => {
-    setInquiryModelName(modelName);
+    setInquiryModelName(typeof modelName === 'string' ? modelName : undefined);
     setIsInquiryModalOpen(true);
   };
   const closeInquiryModal = () => {
